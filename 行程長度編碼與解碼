@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main(){
+	int i,j,t,n,N=1;
+	string a;
+	cin>>a;
+	n=a.size();
+	for(i=0;i<n;i++){
+		for(j=i;i<26;j++){
+			if((int)a[i]=='A'+j){
+				for(t=i+1;t<=n;t++){
+					if((int)a[t]==(int)a[i]){
+						N++;
+					}
+					else{
+						cout<<N<<a[i];
+						i=t;
+						N=1;
+						break;
+					}
+				}
+				
+			}
+		}
+	}
+	
+
+
+	return 0;
+
+
+}
