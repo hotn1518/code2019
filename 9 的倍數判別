@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main(){
+	char n[1000]; 
+	int N,i,T=1,m=0;
+	cin>>n;
+	do{
+		N=strlen(n);
+		for(i=0;i<N;i++){
+			m=m+n[i]-48;
+		}
+		if(m>10){
+			sprintf(n,"%d",m);
+				m=0;
+		}
+		else if(m==9){
+			cout<<"Y"<<" "<<T;
+				break;
+		}
+		else{
+			cout<<"N";
+				break;
+		}
+	}while(T++);
+	return 0;
+}
