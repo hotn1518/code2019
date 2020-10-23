@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+int main(){
+	int a,b,c,i,d,t;
+	cin>>a>>b>>c;
+	if(a==b && b==c){
+			cout<<"GCD="<<a<<endl<<"LCM=";
+	}
+	else{
+	for(i=2;i<900;i++){
+		if(a%i==0 && b%i==0 && c%i==0){
+			d=i;
+		}
+	}
+		cout<<"GCD="<<d<<endl<<"LCM=";
+	}
+	if(a==b && a==c){
+		cout<<a;
+	}
+	else if(a>b && a>c || a>c && c>b){
+		i=2;
+		do{
+			if( (a*i)%b==0 && ((a*i)%c==0)){
+				cout<<a*i;
+				break;
+			}
+		}while(i++);
+	}
+	else if(b>a && a>c  || b>c && c>a){
+			i=2;
+		do{
+			if( (b*i)%a==0 && ((b*i)%c==0)){
+				cout<<b*i;
+				break;
+			}
+		}while(i++);
+	}
+	else if(c>b && b>a || c>a && a>b){
+				i=2;
+		do{
+			if( (c*i)%a==0 && ((c*i)%b==0)){
+				cout<<c*i;
+				break;
+			}
+		}while(i++);
+	}
+	return 0;
+	
+}
